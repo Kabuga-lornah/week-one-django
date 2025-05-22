@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Calorie Counter{% endblock %}</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      footer {
+        font-size: 0.875rem;
+        color: #4b5563;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <header class="bg-neutral-100 text-gray-800 shadow-md">
+      <div
+        class="container mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <h1 class="text-3xl font-extrabold tracking-wide">SnackTrack</h1>
+      </div>
+    </header>
+
+    <main class="container mx-auto flex-grow px-6 py-8 max-w-4xl">
+      {% block content %} {% endblock %}
+    </main>
+
+    <footer
+      class="bg-gray-100 text-center py-4 mt-auto border-t border-gray-300"
+    >
+      &copy; {{ year }} SnackTrack. All rights reserved.
+    </footer>
+  </body>
+</html>
